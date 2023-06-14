@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FarmaciaModelStoreContainer" CdmEntityContainer="FarmaciaEntities">
+    <EntitySetMapping Name="Bodega">
+      <EntityTypeMapping TypeName="FarmaciaModel.Bodega">
+        <MappingFragment StoreEntitySet="Bodega">
+          <ScalarProperty Name="IDBodega" ColumnName="IDBodega" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Ubicacion" ColumnName="Ubicacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cliente">
+      <EntityTypeMapping TypeName="FarmaciaModel.Cliente">
+        <MappingFragment StoreEntitySet="Cliente">
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="PrimerNombre" ColumnName="PrimerNombre" />
+          <ScalarProperty Name="PrimerApellido" ColumnName="PrimerApellido" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetalleFactura">
+      <EntityTypeMapping TypeName="FarmaciaModel.DetalleFactura">
+        <MappingFragment StoreEntitySet="DetalleFactura">
+          <ScalarProperty Name="IDDetalleFactura" ColumnName="IDDetalleFactura" />
+          <ScalarProperty Name="No_Factura" ColumnName="No.Factura" />
+          <ScalarProperty Name="IDProducto" ColumnName="IDProducto" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="TotalItem" ColumnName="TotalItem" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetalleKardex">
+      <EntityTypeMapping TypeName="FarmaciaModel.DetalleKardex">
+        <MappingFragment StoreEntitySet="DetalleKardex">
+          <ScalarProperty Name="IDDetalleKardex" ColumnName="IDDetalleKardex" />
+          <ScalarProperty Name="IDKardex" ColumnName="IDKardex" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Concepto" ColumnName="Concepto" />
+          <ScalarProperty Name="NoDocumento" ColumnName="NoDocumento" />
+          <ScalarProperty Name="Vencimiento" ColumnName="Vencimiento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Documento">
+      <EntityTypeMapping TypeName="FarmaciaModel.Documento">
+        <MappingFragment StoreEntitySet="Documento">
+          <ScalarProperty Name="NoDocumento" ColumnName="NoDocumento" />
+          <ScalarProperty Name="IDTipoDocumento" ColumnName="IDTipoDocumento" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="IDDetalleKardex" ColumnName="IDDetalleKardex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EstanteFarmacia">
+      <EntityTypeMapping TypeName="FarmaciaModel.EstanteFarmacia">
+        <MappingFragment StoreEntitySet="EstanteFarmacia">
+          <ScalarProperty Name="IDEstanteFarmacia" ColumnName="IDEstanteFarmacia" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Factura">
+      <EntityTypeMapping TypeName="FarmaciaModel.Factura">
+        <MappingFragment StoreEntitySet="Factura">
+          <ScalarProperty Name="No_Factura" ColumnName="No.Factura" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="IDUsuarioRegistro" ColumnName="IDUsuarioRegistro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kardex">
+      <EntityTypeMapping TypeName="FarmaciaModel.Kardex">
+        <MappingFragment StoreEntitySet="Kardex">
+          <ScalarProperty Name="IDKardex" ColumnName="IDKardex" />
+          <ScalarProperty Name="CantidadMax" ColumnName="CantidadMax" />
+          <ScalarProperty Name="CantidadMin" ColumnName="CantidadMin" />
+          <ScalarProperty Name="IDProducto" ColumnName="IDProducto" />
+          <ScalarProperty Name="IDBodega" ColumnName="IDBodega" />
+          <ScalarProperty Name="IDMetodo" ColumnName="IDMetodo" />
+          <ScalarProperty Name="IDProveedor" ColumnName="IDProveedor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Metodo">
+      <EntityTypeMapping TypeName="FarmaciaModel.Metodo">
+        <MappingFragment StoreEntitySet="Metodo">
+          <ScalarProperty Name="IDMetodo" ColumnName="IDMetodo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MovimientoKardex">
+      <EntityTypeMapping TypeName="FarmaciaModel.MovimientoKardex">
+        <MappingFragment StoreEntitySet="MovimientoKardex">
+          <ScalarProperty Name="IDMovimientoKardex" ColumnName="IDMovimientoKardex" />
+          <ScalarProperty Name="IDDetalleKardex" ColumnName="IDDetalleKardex" />
+          <ScalarProperty Name="IDTipoMovimientoKardex" ColumnName="IDTipoMovimientoKardex" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="PrecioUnitario" ColumnName="PrecioUnitario" />
+          <ScalarProperty Name="PrecioTotal" ColumnName="PrecioTotal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Producto">
+      <EntityTypeMapping TypeName="FarmaciaModel.Producto">
+        <MappingFragment StoreEntitySet="Producto">
+          <ScalarProperty Name="IDProducto" ColumnName="IDProducto" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="CantidadEnEstante" ColumnName="CantidadEnEstante" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+          <ScalarProperty Name="Foto" ColumnName="Foto" />
+          <ScalarProperty Name="IDEstanteFarmacia" ColumnName="IDEstanteFarmacia" />
+          <ScalarProperty Name="IDUsuarioRegistro" ColumnName="IDUsuarioRegistro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductosAlternativos">
+      <EntityTypeMapping TypeName="FarmaciaModel.ProductosAlternativos">
+        <MappingFragment StoreEntitySet="ProductosAlternativos">
+          <ScalarProperty Name="IDProductoAlternativo" ColumnName="IDProductoAlternativo" />
+          <ScalarProperty Name="IDProducto" ColumnName="IDProducto" />
+          <ScalarProperty Name="IDProductoAlt" ColumnName="IDProductoAlt" />
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Proveedor">
+      <EntityTypeMapping TypeName="FarmaciaModel.Proveedor">
+        <MappingFragment StoreEntitySet="Proveedor">
+          <ScalarProperty Name="IDProveedor" ColumnName="IDProveedor" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rol">
+      <EntityTypeMapping TypeName="FarmaciaModel.Rol">
+        <MappingFragment StoreEntitySet="Rol">
+          <ScalarProperty Name="IDRol" ColumnName="IDRol" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoDocumento">
+      <EntityTypeMapping TypeName="FarmaciaModel.TipoDocumento">
+        <MappingFragment StoreEntitySet="TipoDocumento">
+          <ScalarProperty Name="IDTipoDocumento" ColumnName="IDTipoDocumento" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoMovimientoKardex">
+      <EntityTypeMapping TypeName="FarmaciaModel.TipoMovimientoKardex">
+        <MappingFragment StoreEntitySet="TipoMovimientoKardex">
+          <ScalarProperty Name="IDTipoMovimientoKardex" ColumnName="IDTipoMovimientoKardex" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="FarmaciaModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="IDUsuario" ColumnName="IDUsuario" />
+          <ScalarProperty Name="IDRol" ColumnName="IDRol" />
+          <ScalarProperty Name="PrimerNombre" ColumnName="PrimerNombre" />
+          <ScalarProperty Name="PrimerApellido" ColumnName="PrimerApellido" />
+          <ScalarProperty Name="NombreUsuario" ColumnName="NombreUsuario" />
+          <ScalarProperty Name="Contraseña" ColumnName="Contraseña" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SP_ClienteRegistrar" FunctionName="FarmaciaModel.Store.SP_ClienteRegistrar" />
+    <FunctionImportMapping FunctionImportName="SP_FacturaListarItems" FunctionName="FarmaciaModel.Store.SP_FacturaListarItems">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FarmaciaModel.SP_FacturaListarItems_Result">
+          <ScalarProperty Name="Factura" ColumnName="Factura" />
+          <ScalarProperty Name="Producto" ColumnName="Producto" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+          <ScalarProperty Name="TotalItem" ColumnName="TotalItem" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_FacturaMostrar" FunctionName="FarmaciaModel.Store.SP_FacturaMostrar">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FarmaciaModel.SP_FacturaMostrar_Result">
+          <ScalarProperty Name="Factura" ColumnName="Factura" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="Cliente" ColumnName="Cliente" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Producto" ColumnName="Producto" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+          <ScalarProperty Name="TotalItem" ColumnName="TotalItem" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_FacturaRegistrar" FunctionName="FarmaciaModel.Store.SP_FacturaRegistrar" />
+    <FunctionImportMapping FunctionImportName="SP_MostrarFacturasDelDia" FunctionName="FarmaciaModel.Store.SP_MostrarFacturasDelDia">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FarmaciaModel.SP_MostrarFacturasDelDia_Result">
+          <ScalarProperty Name="No_Factura" ColumnName="No.Factura" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="IDUsuarioRegistro" ColumnName="IDUsuarioRegistro" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_MostrarKardex" FunctionName="FarmaciaModel.Store.SP_MostrarKardex">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FarmaciaModel.SP_MostrarKardex_Result">
+          <ScalarProperty Name="Producto" ColumnName="Producto" />
+          <ScalarProperty Name="Referencia" ColumnName="Referencia" />
+          <ScalarProperty Name="Bodega" ColumnName="Bodega" />
+          <ScalarProperty Name="CantidadMax" ColumnName="CantidadMax" />
+          <ScalarProperty Name="CantidadMin" ColumnName="CantidadMin" />
+          <ScalarProperty Name="Metodo" ColumnName="Metodo" />
+          <ScalarProperty Name="Proveedor" ColumnName="Proveedor" />
+          <ScalarProperty Name="Concepto" ColumnName="Concepto" />
+          <ScalarProperty Name="Vencimiento" ColumnName="Vencimiento" />
+          <ScalarProperty Name="Documento" ColumnName="Documento" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="PrecioUnitario" ColumnName="PrecioUnitario" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="TipoMovimiento" ColumnName="TipoMovimiento" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_ProductoListar" FunctionName="FarmaciaModel.Store.SP_ProductoListar">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FarmaciaModel.SP_ProductoListar_Result">
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="CantidadEnEstante" ColumnName="CantidadEnEstante" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+          <ScalarProperty Name="Nombre1" ColumnName="Nombre1" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_ProductoRegistrar" FunctionName="FarmaciaModel.Store.SP_ProductoRegistrar" />
+    <FunctionImportMapping FunctionImportName="SP_RegistrarDetalleKardex" FunctionName="FarmaciaModel.Store.SP_RegistrarDetalleKardex" />
+  </EntityContainerMapping>
+</Mapping>

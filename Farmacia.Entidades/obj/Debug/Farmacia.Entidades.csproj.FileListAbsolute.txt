@@ -1,0 +1,24 @@
+E:\Documentos\Proyectos Visual\Farmacia\Farmacia.Entidades\bin\Debug\Farmacia.Entidades.dll
+E:\Documentos\Proyectos Visual\Farmacia\Farmacia.Entidades\bin\Debug\Farmacia.Entidades.pdb
+E:\Documentos\Proyectos Visual\Farmacia\Farmacia.Entidades\obj\Debug\Farmacia.Entidades.csproj.AssemblyReference.cache
+E:\Documentos\Proyectos Visual\Farmacia\Farmacia.Entidades\obj\Debug\Farmacia.Entidades.csproj.CoreCompileInputs.cache
+E:\Documentos\Proyectos Visual\Farmacia\Farmacia.Entidades\obj\Debug\Farmacia.Entidades.dll
+E:\Documentos\Proyectos Visual\Farmacia\Farmacia.Entidades\obj\Debug\Farmacia.Entidades.pdb
+C:\Users\David\Documents\GitHub\Proyecto BD\FarmaciaT\Farmacia.Entidades\bin\Debug\Farmacia.Entidades.dll
+C:\Users\David\Documents\GitHub\Proyecto BD\FarmaciaT\Farmacia.Entidades\bin\Debug\Farmacia.Entidades.pdb
+C:\Users\David\Documents\GitHub\Proyecto BD\FarmaciaT\Farmacia.Entidades\obj\Debug\Farmacia.Entidades.csproj.AssemblyReference.cache
+C:\Users\David\Documents\GitHub\Proyecto BD\FarmaciaT\Farmacia.Entidades\obj\Debug\Farmacia.Entidades.csproj.CoreCompileInputs.cache
+C:\Users\David\Documents\GitHub\Proyecto BD\FarmaciaT\Farmacia.Entidades\obj\Debug\Farmacia.Entidades.dll
+C:\Users\David\Documents\GitHub\Proyecto BD\FarmaciaT\Farmacia.Entidades\obj\Debug\Farmacia.Entidades.pdb
+C:\Users\David\Documents\GitHub\Proyecto BD\Farmacia.Entidades\bin\Debug\Farmacia.Entidades.dll
+C:\Users\David\Documents\GitHub\Proyecto BD\Farmacia.Entidades\bin\Debug\Farmacia.Entidades.pdb
+C:\Users\David\Documents\GitHub\Proyecto BD\Farmacia.Entidades\obj\Debug\Farmacia.Entidades.csproj.AssemblyReference.cache
+C:\Users\David\Documents\GitHub\Proyecto BD\Farmacia.Entidades\obj\Debug\Farmacia.Entidades.csproj.CoreCompileInputs.cache
+C:\Users\David\Documents\GitHub\Proyecto BD\Farmacia.Entidades\obj\Debug\Farmacia.Entidades.dll
+C:\Users\David\Documents\GitHub\Proyecto BD\Farmacia.Entidades\obj\Debug\Farmacia.Entidades.pdb
+C:\Users\David\Documents\GitHub\ProyectoBD\FarmaciaT\Farmacia.Entidades\bin\Debug\Farmacia.Entidades.dll
+C:\Users\David\Documents\GitHub\ProyectoBD\FarmaciaT\Farmacia.Entidades\bin\Debug\Farmacia.Entidades.pdb
+C:\Users\David\Documents\GitHub\ProyectoBD\FarmaciaT\Farmacia.Entidades\obj\Debug\Farmacia.Entidades.csproj.AssemblyReference.cache
+C:\Users\David\Documents\GitHub\ProyectoBD\FarmaciaT\Farmacia.Entidades\obj\Debug\Farmacia.Entidades.csproj.CoreCompileInputs.cache
+C:\Users\David\Documents\GitHub\ProyectoBD\FarmaciaT\Farmacia.Entidades\obj\Debug\Farmacia.Entidades.dll
+C:\Users\David\Documents\GitHub\ProyectoBD\FarmaciaT\Farmacia.Entidades\obj\Debug\Farmacia.Entidades.pdb

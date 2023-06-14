@@ -1,0 +1,616 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FarmaciaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Bodega">
+    <Key>
+      <PropertyRef Name="IDBodega" />
+    </Key>
+    <Property Name="IDBodega" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Ubicacion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Kardex" Relationship="Self.FK__Kardex__IDBodega__412EB0B6" FromRole="Bodega" ToRole="Kardex" />
+  </EntityType>
+  <EntityType Name="Cliente">
+    <Key>
+      <PropertyRef Name="DNI" />
+    </Key>
+    <Property Name="DNI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PrimerNombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PrimerApellido" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Factura" Relationship="Self.FK__Factura__DNI__2B3F6F97" FromRole="Cliente" ToRole="Factura" />
+  </EntityType>
+  <EntityType Name="DetalleFactura">
+    <Key>
+      <PropertyRef Name="IDDetalleFactura" />
+    </Key>
+    <Property Name="IDDetalleFactura" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="No_Factura" Type="String" MaxLength="35" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IDProducto" Type="Int32" Nullable="false" />
+    <Property Name="Cantidad" Type="Int32" Nullable="false" />
+    <Property Name="TotalItem" Type="Decimal" Precision="11" Scale="2" Nullable="false" />
+    <NavigationProperty Name="Producto" Relationship="Self.FK__DetalleFa__IDPro__37A5467C" FromRole="DetalleFactura" ToRole="Producto" />
+    <NavigationProperty Name="Factura" Relationship="Self.FK__DetalleFa__No_Fa__36B12243" FromRole="DetalleFactura" ToRole="Factura" />
+  </EntityType>
+  <EntityType Name="DetalleKardex">
+    <Key>
+      <PropertyRef Name="IDDetalleKardex" />
+    </Key>
+    <Property Name="IDDetalleKardex" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDKardex" Type="Int32" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Concepto" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="NoDocumento" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Vencimiento" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="Kardex" Relationship="Self.FK__DetalleKa__IDKar__4AB81AF0" FromRole="DetalleKardex" ToRole="Kardex" />
+    <NavigationProperty Name="Documento" Relationship="Self.FK__DetalleKa__NoDoc__4BAC3F29" FromRole="DetalleKardex" ToRole="Documento" />
+    <NavigationProperty Name="Documento1" Relationship="Self.FK__Documento__IDDet__4CA06362" FromRole="DetalleKardex" ToRole="Documento" />
+    <NavigationProperty Name="MovimientoKardex" Relationship="Self.FK__Movimient__IDDet__4F7CD00D" FromRole="DetalleKardex" ToRole="MovimientoKardex" />
+  </EntityType>
+  <EntityType Name="Documento">
+    <Key>
+      <PropertyRef Name="NoDocumento" />
+    </Key>
+    <Property Name="NoDocumento" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IDTipoDocumento" Type="Int32" Nullable="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="IDDetalleKardex" Type="Int32" />
+    <NavigationProperty Name="DetalleKardex" Relationship="Self.FK__DetalleKa__NoDoc__4BAC3F29" FromRole="Documento" ToRole="DetalleKardex" />
+    <NavigationProperty Name="DetalleKardex1" Relationship="Self.FK__Documento__IDDet__4CA06362" FromRole="Documento" ToRole="DetalleKardex" />
+    <NavigationProperty Name="TipoDocumento" Relationship="Self.FK__Documento__IDTip__47DBAE45" FromRole="Documento" ToRole="TipoDocumento" />
+  </EntityType>
+  <EntityType Name="EstanteFarmacia">
+    <Key>
+      <PropertyRef Name="IDEstanteFarmacia" />
+    </Key>
+    <Property Name="IDEstanteFarmacia" Type="Int32" Nullable="false" />
+    <Property Name="Nombre" Type="String" MaxLength="35" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Producto" Relationship="Self.FK__Producto__IDEsta__32E0915F" FromRole="EstanteFarmacia" ToRole="Producto" />
+  </EntityType>
+  <EntityType Name="Factura">
+    <Key>
+      <PropertyRef Name="No_Factura" />
+    </Key>
+    <Property Name="No_Factura" Type="String" MaxLength="35" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DNI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Total" Type="Decimal" Precision="11" Scale="2" Nullable="false" />
+    <Property Name="IDUsuarioRegistro" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Cliente" Relationship="Self.FK__Factura__DNI__2B3F6F97" FromRole="Factura" ToRole="Cliente" />
+    <NavigationProperty Name="DetalleFactura" Relationship="Self.FK__DetalleFa__No_Fa__36B12243" FromRole="Factura" ToRole="DetalleFactura" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK__Factura__IDUsuar__2C3393D0" FromRole="Factura" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="Kardex">
+    <Key>
+      <PropertyRef Name="IDKardex" />
+    </Key>
+    <Property Name="IDKardex" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CantidadMax" Type="Int32" Nullable="false" />
+    <Property Name="CantidadMin" Type="Int32" Nullable="false" />
+    <Property Name="IDProducto" Type="Int32" Nullable="false" />
+    <Property Name="IDBodega" Type="Int32" Nullable="false" />
+    <Property Name="IDMetodo" Type="Int32" Nullable="false" />
+    <Property Name="IDProveedor" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Bodega" Relationship="Self.FK__Kardex__IDBodega__412EB0B6" FromRole="Kardex" ToRole="Bodega" />
+    <NavigationProperty Name="DetalleKardex" Relationship="Self.FK__DetalleKa__IDKar__4AB81AF0" FromRole="Kardex" ToRole="DetalleKardex" />
+    <NavigationProperty Name="Metodo" Relationship="Self.FK__Kardex__IDMetodo__4222D4EF" FromRole="Kardex" ToRole="Metodo" />
+    <NavigationProperty Name="Producto" Relationship="Self.FK__Kardex__IDProduc__403A8C7D" FromRole="Kardex" ToRole="Producto" />
+    <NavigationProperty Name="Proveedor" Relationship="Self.FK__Kardex__IDProvee__4316F928" FromRole="Kardex" ToRole="Proveedor" />
+  </EntityType>
+  <EntityType Name="Metodo">
+    <Key>
+      <PropertyRef Name="IDMetodo" />
+    </Key>
+    <Property Name="IDMetodo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Kardex" Relationship="Self.FK__Kardex__IDMetodo__4222D4EF" FromRole="Metodo" ToRole="Kardex" />
+  </EntityType>
+  <EntityType Name="MovimientoKardex">
+    <Key>
+      <PropertyRef Name="IDMovimientoKardex" />
+    </Key>
+    <Property Name="IDMovimientoKardex" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDDetalleKardex" Type="Int32" Nullable="false" />
+    <Property Name="IDTipoMovimientoKardex" Type="Int32" Nullable="false" />
+    <Property Name="Cantidad" Type="Int32" Nullable="false" />
+    <Property Name="PrecioUnitario" Type="Decimal" Precision="11" Scale="2" Nullable="false" />
+    <Property Name="PrecioTotal" Type="Decimal" Precision="11" Scale="2" Nullable="false" />
+    <NavigationProperty Name="DetalleKardex" Relationship="Self.FK__Movimient__IDDet__4F7CD00D" FromRole="MovimientoKardex" ToRole="DetalleKardex" />
+    <NavigationProperty Name="TipoMovimientoKardex" Relationship="Self.FK__Movimient__IDTip__5070F446" FromRole="MovimientoKardex" ToRole="TipoMovimientoKardex" />
+  </EntityType>
+  <EntityType Name="Producto">
+    <Key>
+      <PropertyRef Name="IDProducto" />
+    </Key>
+    <Property Name="IDProducto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CantidadEnEstante" Type="Int32" Nullable="false" />
+    <Property Name="Precio" Type="Decimal" Precision="11" Scale="2" Nullable="false" />
+    <Property Name="Foto" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="IDEstanteFarmacia" Type="Int32" Nullable="false" />
+    <Property Name="IDUsuarioRegistro" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="DetalleFactura" Relationship="Self.FK__DetalleFa__IDPro__37A5467C" FromRole="Producto" ToRole="DetalleFactura" />
+    <NavigationProperty Name="EstanteFarmacia" Relationship="Self.FK__Producto__IDEsta__32E0915F" FromRole="Producto" ToRole="EstanteFarmacia" />
+    <NavigationProperty Name="Kardex" Relationship="Self.FK__Kardex__IDProduc__403A8C7D" FromRole="Producto" ToRole="Kardex" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK__Producto__IDUsua__33D4B598" FromRole="Producto" ToRole="Usuario" />
+    <NavigationProperty Name="ProductosAlternativos" Relationship="Self.FK__Productos__IDPro__534D60F1" FromRole="Producto" ToRole="ProductosAlternativos" />
+    <NavigationProperty Name="ProductosAlternativos1" Relationship="Self.FK__Productos__IDPro__5441852A" FromRole="Producto" ToRole="ProductosAlternativos" />
+  </EntityType>
+  <EntityType Name="ProductosAlternativos">
+    <Key>
+      <PropertyRef Name="IDProductoAlternativo" />
+    </Key>
+    <Property Name="IDProductoAlternativo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDProducto" Type="Int32" Nullable="false" />
+    <Property Name="IDProductoAlt" Type="Int32" Nullable="false" />
+    <Property Name="Observaciones" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Producto" Relationship="Self.FK__Productos__IDPro__534D60F1" FromRole="ProductosAlternativos" ToRole="Producto" />
+    <NavigationProperty Name="Producto1" Relationship="Self.FK__Productos__IDPro__5441852A" FromRole="ProductosAlternativos" ToRole="Producto" />
+  </EntityType>
+  <EntityType Name="Proveedor">
+    <Key>
+      <PropertyRef Name="IDProveedor" />
+    </Key>
+    <Property Name="IDProveedor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="35" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Kardex" Relationship="Self.FK__Kardex__IDProvee__4316F928" FromRole="Proveedor" ToRole="Kardex" />
+  </EntityType>
+  <EntityType Name="Rol">
+    <Key>
+      <PropertyRef Name="IDRol" />
+    </Key>
+    <Property Name="IDRol" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="35" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK__Usuario__IDRol__267ABA7A" FromRole="Rol" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="TipoDocumento">
+    <Key>
+      <PropertyRef Name="IDTipoDocumento" />
+    </Key>
+    <Property Name="IDTipoDocumento" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="35" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Documento" Relationship="Self.FK__Documento__IDTip__47DBAE45" FromRole="TipoDocumento" ToRole="Documento" />
+  </EntityType>
+  <EntityType Name="TipoMovimientoKardex">
+    <Key>
+      <PropertyRef Name="IDTipoMovimientoKardex" />
+    </Key>
+    <Property Name="IDTipoMovimientoKardex" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="MovimientoKardex" Relationship="Self.FK__Movimient__IDTip__5070F446" FromRole="TipoMovimientoKardex" ToRole="MovimientoKardex" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="IDUsuario" />
+    </Key>
+    <Property Name="IDUsuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDRol" Type="Int32" Nullable="false" />
+    <Property Name="PrimerNombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PrimerApellido" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NombreUsuario" Type="String" MaxLength="35" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Contraseña" Type="String" MaxLength="35" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Factura" Relationship="Self.FK__Factura__IDUsuar__2C3393D0" FromRole="Usuario" ToRole="Factura" />
+    <NavigationProperty Name="Producto" Relationship="Self.FK__Producto__IDUsua__33D4B598" FromRole="Usuario" ToRole="Producto" />
+    <NavigationProperty Name="Rol" Relationship="Self.FK__Usuario__IDRol__267ABA7A" FromRole="Usuario" ToRole="Rol" />
+  </EntityType>
+  <Association Name="FK__Kardex__IDBodega__412EB0B6">
+    <End Role="Bodega" Type="Self.Bodega" Multiplicity="1" />
+    <End Role="Kardex" Type="Self.Kardex" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bodega">
+        <PropertyRef Name="IDBodega" />
+      </Principal>
+      <Dependent Role="Kardex">
+        <PropertyRef Name="IDBodega" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Factura__DNI__2B3F6F97">
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="1" />
+    <End Role="Factura" Type="Self.Factura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="DNI" />
+      </Principal>
+      <Dependent Role="Factura">
+        <PropertyRef Name="DNI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DetalleFa__IDPro__37A5467C">
+    <End Role="Producto" Type="Self.Producto" Multiplicity="1" />
+    <End Role="DetalleFactura" Type="Self.DetalleFactura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Producto">
+        <PropertyRef Name="IDProducto" />
+      </Principal>
+      <Dependent Role="DetalleFactura">
+        <PropertyRef Name="IDProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DetalleFa__No_Fa__36B12243">
+    <End Role="Factura" Type="Self.Factura" Multiplicity="1" />
+    <End Role="DetalleFactura" Type="Self.DetalleFactura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Factura">
+        <PropertyRef Name="No_Factura" />
+      </Principal>
+      <Dependent Role="DetalleFactura">
+        <PropertyRef Name="No_Factura" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DetalleKa__IDKar__4AB81AF0">
+    <End Role="Kardex" Type="Self.Kardex" Multiplicity="1" />
+    <End Role="DetalleKardex" Type="Self.DetalleKardex" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kardex">
+        <PropertyRef Name="IDKardex" />
+      </Principal>
+      <Dependent Role="DetalleKardex">
+        <PropertyRef Name="IDKardex" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DetalleKa__NoDoc__4BAC3F29">
+    <End Role="Documento" Type="Self.Documento" Multiplicity="1" />
+    <End Role="DetalleKardex" Type="Self.DetalleKardex" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Documento">
+        <PropertyRef Name="NoDocumento" />
+      </Principal>
+      <Dependent Role="DetalleKardex">
+        <PropertyRef Name="NoDocumento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Documento__IDDet__4CA06362">
+    <End Role="DetalleKardex" Type="Self.DetalleKardex" Multiplicity="0..1" />
+    <End Role="Documento" Type="Self.Documento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DetalleKardex">
+        <PropertyRef Name="IDDetalleKardex" />
+      </Principal>
+      <Dependent Role="Documento">
+        <PropertyRef Name="IDDetalleKardex" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Movimient__IDDet__4F7CD00D">
+    <End Role="DetalleKardex" Type="Self.DetalleKardex" Multiplicity="1" />
+    <End Role="MovimientoKardex" Type="Self.MovimientoKardex" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DetalleKardex">
+        <PropertyRef Name="IDDetalleKardex" />
+      </Principal>
+      <Dependent Role="MovimientoKardex">
+        <PropertyRef Name="IDDetalleKardex" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Documento__IDTip__47DBAE45">
+    <End Role="TipoDocumento" Type="Self.TipoDocumento" Multiplicity="1" />
+    <End Role="Documento" Type="Self.Documento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoDocumento">
+        <PropertyRef Name="IDTipoDocumento" />
+      </Principal>
+      <Dependent Role="Documento">
+        <PropertyRef Name="IDTipoDocumento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Producto__IDEsta__32E0915F">
+    <End Role="EstanteFarmacia" Type="Self.EstanteFarmacia" Multiplicity="1" />
+    <End Role="Producto" Type="Self.Producto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EstanteFarmacia">
+        <PropertyRef Name="IDEstanteFarmacia" />
+      </Principal>
+      <Dependent Role="Producto">
+        <PropertyRef Name="IDEstanteFarmacia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Factura__IDUsuar__2C3393D0">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Factura" Type="Self.Factura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IDUsuario" />
+      </Principal>
+      <Dependent Role="Factura">
+        <PropertyRef Name="IDUsuarioRegistro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Kardex__IDMetodo__4222D4EF">
+    <End Role="Metodo" Type="Self.Metodo" Multiplicity="1" />
+    <End Role="Kardex" Type="Self.Kardex" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Metodo">
+        <PropertyRef Name="IDMetodo" />
+      </Principal>
+      <Dependent Role="Kardex">
+        <PropertyRef Name="IDMetodo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Kardex__IDProduc__403A8C7D">
+    <End Role="Producto" Type="Self.Producto" Multiplicity="1" />
+    <End Role="Kardex" Type="Self.Kardex" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Producto">
+        <PropertyRef Name="IDProducto" />
+      </Principal>
+      <Dependent Role="Kardex">
+        <PropertyRef Name="IDProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Kardex__IDProvee__4316F928">
+    <End Role="Proveedor" Type="Self.Proveedor" Multiplicity="1" />
+    <End Role="Kardex" Type="Self.Kardex" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Proveedor">
+        <PropertyRef Name="IDProveedor" />
+      </Principal>
+      <Dependent Role="Kardex">
+        <PropertyRef Name="IDProveedor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Movimient__IDTip__5070F446">
+    <End Role="TipoMovimientoKardex" Type="Self.TipoMovimientoKardex" Multiplicity="1" />
+    <End Role="MovimientoKardex" Type="Self.MovimientoKardex" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoMovimientoKardex">
+        <PropertyRef Name="IDTipoMovimientoKardex" />
+      </Principal>
+      <Dependent Role="MovimientoKardex">
+        <PropertyRef Name="IDTipoMovimientoKardex" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Producto__IDUsua__33D4B598">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Producto" Type="Self.Producto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IDUsuario" />
+      </Principal>
+      <Dependent Role="Producto">
+        <PropertyRef Name="IDUsuarioRegistro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Productos__IDPro__534D60F1">
+    <End Role="Producto" Type="Self.Producto" Multiplicity="1" />
+    <End Role="ProductosAlternativos" Type="Self.ProductosAlternativos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Producto">
+        <PropertyRef Name="IDProducto" />
+      </Principal>
+      <Dependent Role="ProductosAlternativos">
+        <PropertyRef Name="IDProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Productos__IDPro__5441852A">
+    <End Role="Producto" Type="Self.Producto" Multiplicity="1" />
+    <End Role="ProductosAlternativos" Type="Self.ProductosAlternativos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Producto">
+        <PropertyRef Name="IDProducto" />
+      </Principal>
+      <Dependent Role="ProductosAlternativos">
+        <PropertyRef Name="IDProductoAlt" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Usuario__IDRol__267ABA7A">
+    <End Role="Rol" Type="Self.Rol" Multiplicity="1" />
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Rol">
+        <PropertyRef Name="IDRol" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="IDRol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="FarmaciaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Bodega" EntityType="Self.Bodega" />
+    <EntitySet Name="Cliente" EntityType="Self.Cliente" />
+    <EntitySet Name="DetalleFactura" EntityType="Self.DetalleFactura" />
+    <EntitySet Name="DetalleKardex" EntityType="Self.DetalleKardex" />
+    <EntitySet Name="Documento" EntityType="Self.Documento" />
+    <EntitySet Name="EstanteFarmacia" EntityType="Self.EstanteFarmacia" />
+    <EntitySet Name="Factura" EntityType="Self.Factura" />
+    <EntitySet Name="Kardex" EntityType="Self.Kardex" />
+    <EntitySet Name="Metodo" EntityType="Self.Metodo" />
+    <EntitySet Name="MovimientoKardex" EntityType="Self.MovimientoKardex" />
+    <EntitySet Name="Producto" EntityType="Self.Producto" />
+    <EntitySet Name="ProductosAlternativos" EntityType="Self.ProductosAlternativos" />
+    <EntitySet Name="Proveedor" EntityType="Self.Proveedor" />
+    <EntitySet Name="Rol" EntityType="Self.Rol" />
+    <EntitySet Name="TipoDocumento" EntityType="Self.TipoDocumento" />
+    <EntitySet Name="TipoMovimientoKardex" EntityType="Self.TipoMovimientoKardex" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" />
+    <AssociationSet Name="FK__Kardex__IDBodega__412EB0B6" Association="Self.FK__Kardex__IDBodega__412EB0B6">
+      <End Role="Bodega" EntitySet="Bodega" />
+      <End Role="Kardex" EntitySet="Kardex" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Factura__DNI__2B3F6F97" Association="Self.FK__Factura__DNI__2B3F6F97">
+      <End Role="Cliente" EntitySet="Cliente" />
+      <End Role="Factura" EntitySet="Factura" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DetalleFa__IDPro__37A5467C" Association="Self.FK__DetalleFa__IDPro__37A5467C">
+      <End Role="Producto" EntitySet="Producto" />
+      <End Role="DetalleFactura" EntitySet="DetalleFactura" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DetalleFa__No_Fa__36B12243" Association="Self.FK__DetalleFa__No_Fa__36B12243">
+      <End Role="Factura" EntitySet="Factura" />
+      <End Role="DetalleFactura" EntitySet="DetalleFactura" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DetalleKa__IDKar__4AB81AF0" Association="Self.FK__DetalleKa__IDKar__4AB81AF0">
+      <End Role="Kardex" EntitySet="Kardex" />
+      <End Role="DetalleKardex" EntitySet="DetalleKardex" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DetalleKa__NoDoc__4BAC3F29" Association="Self.FK__DetalleKa__NoDoc__4BAC3F29">
+      <End Role="Documento" EntitySet="Documento" />
+      <End Role="DetalleKardex" EntitySet="DetalleKardex" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Documento__IDDet__4CA06362" Association="Self.FK__Documento__IDDet__4CA06362">
+      <End Role="DetalleKardex" EntitySet="DetalleKardex" />
+      <End Role="Documento" EntitySet="Documento" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Movimient__IDDet__4F7CD00D" Association="Self.FK__Movimient__IDDet__4F7CD00D">
+      <End Role="DetalleKardex" EntitySet="DetalleKardex" />
+      <End Role="MovimientoKardex" EntitySet="MovimientoKardex" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Documento__IDTip__47DBAE45" Association="Self.FK__Documento__IDTip__47DBAE45">
+      <End Role="TipoDocumento" EntitySet="TipoDocumento" />
+      <End Role="Documento" EntitySet="Documento" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Producto__IDEsta__32E0915F" Association="Self.FK__Producto__IDEsta__32E0915F">
+      <End Role="EstanteFarmacia" EntitySet="EstanteFarmacia" />
+      <End Role="Producto" EntitySet="Producto" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Factura__IDUsuar__2C3393D0" Association="Self.FK__Factura__IDUsuar__2C3393D0">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Factura" EntitySet="Factura" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Kardex__IDMetodo__4222D4EF" Association="Self.FK__Kardex__IDMetodo__4222D4EF">
+      <End Role="Metodo" EntitySet="Metodo" />
+      <End Role="Kardex" EntitySet="Kardex" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Kardex__IDProduc__403A8C7D" Association="Self.FK__Kardex__IDProduc__403A8C7D">
+      <End Role="Producto" EntitySet="Producto" />
+      <End Role="Kardex" EntitySet="Kardex" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Kardex__IDProvee__4316F928" Association="Self.FK__Kardex__IDProvee__4316F928">
+      <End Role="Proveedor" EntitySet="Proveedor" />
+      <End Role="Kardex" EntitySet="Kardex" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Movimient__IDTip__5070F446" Association="Self.FK__Movimient__IDTip__5070F446">
+      <End Role="TipoMovimientoKardex" EntitySet="TipoMovimientoKardex" />
+      <End Role="MovimientoKardex" EntitySet="MovimientoKardex" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Producto__IDUsua__33D4B598" Association="Self.FK__Producto__IDUsua__33D4B598">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Producto" EntitySet="Producto" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Productos__IDPro__534D60F1" Association="Self.FK__Productos__IDPro__534D60F1">
+      <End Role="Producto" EntitySet="Producto" />
+      <End Role="ProductosAlternativos" EntitySet="ProductosAlternativos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Productos__IDPro__5441852A" Association="Self.FK__Productos__IDPro__5441852A">
+      <End Role="Producto" EntitySet="Producto" />
+      <End Role="ProductosAlternativos" EntitySet="ProductosAlternativos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Usuario__IDRol__267ABA7A" Association="Self.FK__Usuario__IDRol__267ABA7A">
+      <End Role="Rol" EntitySet="Rol" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+    <FunctionImport Name="SP_ClienteRegistrar" ReturnType="Collection(String)">
+      <Parameter Name="DNI" Mode="In" Type="String" />
+      <Parameter Name="PrimerNombre" Mode="In" Type="String" />
+      <Parameter Name="PrimerApellido" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_FacturaListarItems" ReturnType="Collection(FarmaciaModel.SP_FacturaListarItems_Result)">
+      <Parameter Name="NoFactura" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_FacturaMostrar" ReturnType="Collection(FarmaciaModel.SP_FacturaMostrar_Result)">
+      <Parameter Name="NoFactura" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_FacturaRegistrar" ReturnType="Collection(String)">
+      <Parameter Name="NoFactura" Mode="In" Type="String" />
+      <Parameter Name="IDUsuarioRegistro" Mode="In" Type="Int32" />
+      <Parameter Name="DNICliente" Mode="In" Type="String" />
+      <Parameter Name="IDProducto" Mode="In" Type="Int32" />
+      <Parameter Name="Cantidad" Mode="In" Type="Int32" />
+      <Parameter Name="TotalItem" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="SP_MostrarFacturasDelDia" ReturnType="Collection(FarmaciaModel.SP_MostrarFacturasDelDia_Result)" />
+    <FunctionImport Name="SP_MostrarKardex" ReturnType="Collection(FarmaciaModel.SP_MostrarKardex_Result)">
+      <Parameter Name="IDProducto" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_ProductoListar" ReturnType="Collection(FarmaciaModel.SP_ProductoListar_Result)">
+      <Parameter Name="IDProducto" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_ProductoRegistrar" ReturnType="Collection(String)">
+      <Parameter Name="IDProducto" Mode="In" Type="Int32" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Descripcion" Mode="In" Type="String" />
+      <Parameter Name="CantidadEnEstante" Mode="In" Type="Int32" />
+      <Parameter Name="Precio" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="SP_RegistrarDetalleKardex" ReturnType="Collection(String)">
+      <Parameter Name="IDProducto" Mode="In" Type="Int32" />
+      <Parameter Name="Fecha" Mode="In" Type="DateTime" />
+      <Parameter Name="Concepto" Mode="In" Type="String" />
+      <Parameter Name="NoDocume" Mode="In" Type="String" />
+      <Parameter Name="Vencimiento" Mode="In" Type="DateTime" />
+      <Parameter Name="IDTipoMov" Mode="In" Type="Int32" />
+      <Parameter Name="Cantidad" Mode="In" Type="Int32" />
+      <Parameter Name="PrecioU" Mode="In" Type="Decimal" />
+      <Parameter Name="PrecioTotal" Mode="In" Type="Decimal" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="SP_FacturaListarItems_Result">
+    <Property Type="String" Name="Factura" Nullable="false" MaxLength="35" />
+    <Property Type="String" Name="Producto" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Descripcion" Nullable="true" />
+    <Property Type="Int32" Name="Cantidad" Nullable="false" />
+    <Property Type="Decimal" Name="Precio" Nullable="false" Precision="11" Scale="2" />
+    <Property Type="Decimal" Name="TotalItem" Nullable="false" Precision="11" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="SP_FacturaMostrar_Result">
+    <Property Type="String" Name="Factura" Nullable="false" MaxLength="35" />
+    <Property Type="String" Name="DNI" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Cliente" Nullable="false" MaxLength="101" />
+    <Property Type="DateTime" Name="Fecha" Nullable="false" />
+    <Property Type="Decimal" Name="Total" Nullable="false" Precision="11" Scale="2" />
+    <Property Type="String" Name="Producto" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Descripcion" Nullable="true" />
+    <Property Type="Int32" Name="Cantidad" Nullable="false" />
+    <Property Type="Decimal" Name="Precio" Nullable="false" Precision="11" Scale="2" />
+    <Property Type="Decimal" Name="TotalItem" Nullable="false" Precision="11" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="SP_MostrarFacturasDelDia_Result">
+    <Property Type="String" Name="No_Factura" Nullable="false" MaxLength="35" />
+    <Property Type="String" Name="DNI" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="Fecha" Nullable="false" />
+    <Property Type="Decimal" Name="Total" Nullable="false" Precision="11" Scale="2" />
+    <Property Type="Int32" Name="IDUsuarioRegistro" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SP_MostrarKardex_Result">
+    <Property Type="String" Name="Producto" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="Referencia" Nullable="false" />
+    <Property Type="String" Name="Bodega" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="CantidadMax" Nullable="false" />
+    <Property Type="Int32" Name="CantidadMin" Nullable="false" />
+    <Property Type="String" Name="Metodo" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Proveedor" Nullable="false" MaxLength="35" />
+    <Property Type="String" Name="Concepto" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="Vencimiento" Nullable="false" />
+    <Property Type="String" Name="Documento" Nullable="false" MaxLength="20" />
+    <Property Type="DateTime" Name="Fecha" Nullable="false" />
+    <Property Type="Decimal" Name="PrecioUnitario" Nullable="false" Precision="11" Scale="2" />
+    <Property Type="Int32" Name="Cantidad" Nullable="false" />
+    <Property Type="String" Name="TipoMovimiento" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="SP_ProductoListar_Result">
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="CantidadEnEstante" Nullable="false" />
+    <Property Type="Decimal" Name="Precio" Nullable="false" Precision="11" Scale="2" />
+    <Property Type="String" Name="Nombre1" Nullable="false" MaxLength="35" />
+  </ComplexType>
+</Schema>

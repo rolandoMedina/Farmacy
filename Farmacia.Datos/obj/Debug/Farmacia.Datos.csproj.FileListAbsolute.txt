@@ -1,0 +1,82 @@
+E:\Documentos\Proyectos Visual\Farmacia\Farmacia.Datos\bin\Debug\Farmacia.Datos.dll.config
+E:\Documentos\Proyectos Visual\Farmacia\Farmacia.Datos\bin\Debug\Farmacia.Datos.dll
+E:\Documentos\Proyectos Visual\Farmacia\Farmacia.Datos\bin\Debug\Farmacia.Datos.pdb
+E:\Documentos\Proyectos Visual\Farmacia\Farmacia.Datos\bin\Debug\EntityFramework.dll
+E:\Documentos\Proyectos Visual\Farmacia\Farmacia.Datos\bin\Debug\EntityFramework.SqlServer.dll
+E:\Documentos\Proyectos Visual\Farmacia\Farmacia.Datos\bin\Debug\Farmacia.Entidades.dll
+E:\Documentos\Proyectos Visual\Farmacia\Farmacia.Datos\bin\Debug\Farmacia.Entidades.pdb
+E:\Documentos\Proyectos Visual\Farmacia\Farmacia.Datos\bin\Debug\EntityFramework.xml
+E:\Documentos\Proyectos Visual\Farmacia\Farmacia.Datos\bin\Debug\EntityFramework.SqlServer.xml
+E:\Documentos\Proyectos Visual\Farmacia\Farmacia.Datos\obj\Debug\Farmacia.Datos.csproj.AssemblyReference.cache
+E:\Documentos\Proyectos Visual\Farmacia\Farmacia.Datos\obj\Debug\Farmacia.Datos.csproj.CoreCompileInputs.cache
+E:\Documentos\Proyectos Visual\Farmacia\Farmacia.Datos\obj\Debug\Farmacia.Datos.csproj.CopyComplete
+E:\Documentos\Proyectos Visual\Farmacia\Farmacia.Datos\obj\Debug\Farmacia.Datos.dll
+E:\Documentos\Proyectos Visual\Farmacia\Farmacia.Datos\obj\Debug\Farmacia.Datos.pdb
+C:\Users\David\Documents\GitHub\Proyecto BD\FarmaciaT\Farmacia.Datos\obj\Debug\Farmacia.Datos.dll
+C:\Users\David\Documents\GitHub\Proyecto BD\FarmaciaT\Farmacia.Datos\obj\Debug\Farmacia.Datos.pdb
+C:\Users\David\Documents\GitHub\Proyecto BD\FarmaciaT\Farmacia.Datos\bin\Debug\Farmacia.Datos.dll.config
+C:\Users\David\Documents\GitHub\Proyecto BD\FarmaciaT\Farmacia.Datos\bin\Debug\Farmacia.Datos.dll
+C:\Users\David\Documents\GitHub\Proyecto BD\FarmaciaT\Farmacia.Datos\bin\Debug\Farmacia.Datos.pdb
+C:\Users\David\Documents\GitHub\Proyecto BD\FarmaciaT\Farmacia.Datos\bin\Debug\EntityFramework.dll
+C:\Users\David\Documents\GitHub\Proyecto BD\FarmaciaT\Farmacia.Datos\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\David\Documents\GitHub\Proyecto BD\FarmaciaT\Farmacia.Datos\bin\Debug\Farmacia.Entidades.dll
+C:\Users\David\Documents\GitHub\Proyecto BD\FarmaciaT\Farmacia.Datos\bin\Debug\Farmacia.Entidades.pdb
+C:\Users\David\Documents\GitHub\Proyecto BD\FarmaciaT\Farmacia.Datos\bin\Debug\EntityFramework.xml
+C:\Users\David\Documents\GitHub\Proyecto BD\FarmaciaT\Farmacia.Datos\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\David\Documents\GitHub\Proyecto BD\FarmaciaT\Farmacia.Datos\obj\Debug\Farmacia.Datos.csproj.AssemblyReference.cache
+C:\Users\David\Documents\GitHub\Proyecto BD\FarmaciaT\Farmacia.Datos\obj\Debug\Farmacia.Datos.csproj.CoreCompileInputs.cache
+C:\Users\David\Documents\GitHub\Proyecto BD\FarmaciaT\Farmacia.Datos\obj\Debug\Farmacia.Datos.csproj.CopyComplete
+C:\Users\rolan\Desktop\Farmacia\FarmaciaT\Farmacia.Datos\bin\Debug\Farmacia.Datos.dll.config
+C:\Users\rolan\Desktop\Farmacia\FarmaciaT\Farmacia.Datos\bin\Debug\Farmacia.Datos.dll
+C:\Users\rolan\Desktop\Farmacia\FarmaciaT\Farmacia.Datos\bin\Debug\Farmacia.Datos.pdb
+C:\Users\rolan\Desktop\Farmacia\FarmaciaT\Farmacia.Datos\bin\Debug\EntityFramework.dll
+C:\Users\rolan\Desktop\Farmacia\FarmaciaT\Farmacia.Datos\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\rolan\Desktop\Farmacia\FarmaciaT\Farmacia.Datos\bin\Debug\Farmacia.Entidades.dll
+C:\Users\rolan\Desktop\Farmacia\FarmaciaT\Farmacia.Datos\bin\Debug\Farmacia.Entidades.pdb
+C:\Users\rolan\Desktop\Farmacia\FarmaciaT\Farmacia.Datos\bin\Debug\EntityFramework.xml
+C:\Users\rolan\Desktop\Farmacia\FarmaciaT\Farmacia.Datos\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\rolan\Desktop\Farmacia\FarmaciaT\Farmacia.Datos\obj\Debug\Farmacia.Datos.csproj.AssemblyReference.cache
+C:\Users\rolan\Desktop\Farmacia\FarmaciaT\Farmacia.Datos\obj\Debug\Farmacia.Datos.csproj.CoreCompileInputs.cache
+C:\Users\rolan\Desktop\Farmacia\FarmaciaT\Farmacia.Datos\obj\Debug\Farmacia.Datos.csproj.CopyComplete
+C:\Users\rolan\Desktop\Farmacia\FarmaciaT\Farmacia.Datos\obj\Debug\Farmacia.Datos.dll
+C:\Users\rolan\Desktop\Farmacia\FarmaciaT\Farmacia.Datos\obj\Debug\Farmacia.Datos.pdb
+C:\Users\David\Documents\GitHub\Proyecto BD\Farmacia.Datos\bin\Debug\Farmacia.Datos.dll.config
+C:\Users\David\Documents\GitHub\Proyecto BD\Farmacia.Datos\bin\Debug\Farmacia.Datos.dll
+C:\Users\David\Documents\GitHub\Proyecto BD\Farmacia.Datos\bin\Debug\Farmacia.Datos.pdb
+C:\Users\David\Documents\GitHub\Proyecto BD\Farmacia.Datos\bin\Debug\EntityFramework.dll
+C:\Users\David\Documents\GitHub\Proyecto BD\Farmacia.Datos\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\David\Documents\GitHub\Proyecto BD\Farmacia.Datos\bin\Debug\Farmacia.Entidades.dll
+C:\Users\David\Documents\GitHub\Proyecto BD\Farmacia.Datos\bin\Debug\Farmacia.Entidades.pdb
+C:\Users\David\Documents\GitHub\Proyecto BD\Farmacia.Datos\bin\Debug\EntityFramework.xml
+C:\Users\David\Documents\GitHub\Proyecto BD\Farmacia.Datos\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\David\Documents\GitHub\Proyecto BD\Farmacia.Datos\obj\Debug\Farmacia.Datos.csproj.AssemblyReference.cache
+C:\Users\David\Documents\GitHub\Proyecto BD\Farmacia.Datos\obj\Debug\Farmacia.Datos.csproj.CoreCompileInputs.cache
+C:\Users\David\Documents\GitHub\Proyecto BD\Farmacia.Datos\obj\Debug\Farmacia.Datos.csproj.CopyComplete
+C:\Users\David\Documents\GitHub\Proyecto BD\Farmacia.Datos\obj\Debug\Farmacia.Datos.dll
+C:\Users\David\Documents\GitHub\Proyecto BD\Farmacia.Datos\obj\Debug\Farmacia.Datos.pdb
+C:\Users\David\Documents\GitHub\ProyectoBD\FarmaciaT\Farmacia.Datos\bin\Debug\Farmacia.Datos.dll.config
+C:\Users\David\Documents\GitHub\ProyectoBD\FarmaciaT\Farmacia.Datos\bin\Debug\Farmacia.Datos.dll
+C:\Users\David\Documents\GitHub\ProyectoBD\FarmaciaT\Farmacia.Datos\bin\Debug\Farmacia.Datos.pdb
+C:\Users\David\Documents\GitHub\ProyectoBD\FarmaciaT\Farmacia.Datos\bin\Debug\EntityFramework.dll
+C:\Users\David\Documents\GitHub\ProyectoBD\FarmaciaT\Farmacia.Datos\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\David\Documents\GitHub\ProyectoBD\FarmaciaT\Farmacia.Datos\bin\Debug\Farmacia.Entidades.dll
+C:\Users\David\Documents\GitHub\ProyectoBD\FarmaciaT\Farmacia.Datos\bin\Debug\Farmacia.Entidades.pdb
+C:\Users\David\Documents\GitHub\ProyectoBD\FarmaciaT\Farmacia.Datos\bin\Debug\EntityFramework.xml
+C:\Users\David\Documents\GitHub\ProyectoBD\FarmaciaT\Farmacia.Datos\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\David\Documents\GitHub\ProyectoBD\FarmaciaT\Farmacia.Datos\obj\Debug\Farmacia.Datos.csproj.AssemblyReference.cache
+C:\Users\David\Documents\GitHub\ProyectoBD\FarmaciaT\Farmacia.Datos\obj\Debug\Farmacia.Datos.csproj.CoreCompileInputs.cache
+C:\Users\David\Documents\GitHub\ProyectoBD\FarmaciaT\Farmacia.Datos\obj\Debug\Farmacia.Datos.csproj.CopyComplete
+C:\Users\David\Documents\GitHub\ProyectoBD\FarmaciaT\Farmacia.Datos\obj\Debug\Farmacia.Datos.dll
+C:\Users\David\Documents\GitHub\ProyectoBD\FarmaciaT\Farmacia.Datos\obj\Debug\Farmacia.Datos.pdb
+C:\Users\rolan\Desktop\f\FarmaciaT\Farmacia.Datos\obj\Debug\Farmacia.Datos.csproj.AssemblyReference.cache
+C:\Users\rolan\Desktop\f\FarmaciaT\Farmacia.Datos\obj\Debug\Farmacia.Datos.csproj.CoreCompileInputs.cache
+C:\Users\rolan\Desktop\f\FarmaciaT\Farmacia.Datos\obj\Debug\Farmacia.Datos.dll
+C:\Users\rolan\Desktop\f\FarmaciaT\Farmacia.Datos\obj\Debug\Farmacia.Datos.pdb
+C:\Users\rolan\Desktop\f\FarmaciaT\Farmacia.Datos\bin\Debug\Farmacia.Datos.dll.config
+C:\Users\rolan\Desktop\f\FarmaciaT\Farmacia.Datos\bin\Debug\Farmacia.Datos.dll
+C:\Users\rolan\Desktop\f\FarmaciaT\Farmacia.Datos\bin\Debug\Farmacia.Datos.pdb
+C:\Users\rolan\Desktop\f\FarmaciaT\Farmacia.Datos\bin\Debug\EntityFramework.dll
+C:\Users\rolan\Desktop\f\FarmaciaT\Farmacia.Datos\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\rolan\Desktop\f\FarmaciaT\Farmacia.Datos\bin\Debug\EntityFramework.xml
+C:\Users\rolan\Desktop\f\FarmaciaT\Farmacia.Datos\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\rolan\Desktop\f\FarmaciaT\Farmacia.Datos\obj\Debug\Farmacia.Datos.csproj.CopyComplete
