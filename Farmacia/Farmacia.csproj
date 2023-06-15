@@ -141,6 +141,10 @@
       <Project>{f816ba4d-26b2-436e-b0cd-66f08bf2aaa3}</Project>
       <Name>Farmacia.Logica</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Farmacia.Reportes\Farmacia.Reportes.csproj">
+      <Project>{513be86f-cfcb-4606-a318-c1919b3fa9f5}</Project>
+      <Name>Farmacia.Reportes</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Accesos\" />
