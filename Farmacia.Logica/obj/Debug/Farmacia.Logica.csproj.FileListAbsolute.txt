@@ -80,3 +80,15 @@ C:\Users\rolan\Desktop\f\FarmaciaT\Farmacia.Logica\bin\Debug\Farmacia.Datos.pdb
 C:\Users\rolan\Desktop\f\FarmaciaT\Farmacia.Logica\bin\Debug\Farmacia.Datos.dll.config
 C:\Users\rolan\Desktop\f\FarmaciaT\Farmacia.Logica\bin\Debug\EntityFramework.xml
 C:\Users\rolan\Desktop\f\FarmaciaT\Farmacia.Logica\obj\Debug\Farmacia.Logica.csproj.CopyComplete
+C:\Users\David\Documents\GitHub\ProyectoBD\Farmacy\Farmacia.Logica\bin\Debug\Farmacia.Logica.dll
+C:\Users\David\Documents\GitHub\ProyectoBD\Farmacy\Farmacia.Logica\bin\Debug\Farmacia.Logica.pdb
+C:\Users\David\Documents\GitHub\ProyectoBD\Farmacy\Farmacia.Logica\bin\Debug\Farmacia.Datos.dll
+C:\Users\David\Documents\GitHub\ProyectoBD\Farmacy\Farmacia.Logica\bin\Debug\EntityFramework.dll
+C:\Users\David\Documents\GitHub\ProyectoBD\Farmacy\Farmacia.Logica\bin\Debug\Farmacia.Datos.pdb
+C:\Users\David\Documents\GitHub\ProyectoBD\Farmacy\Farmacia.Logica\bin\Debug\Farmacia.Datos.dll.config
+C:\Users\David\Documents\GitHub\ProyectoBD\Farmacy\Farmacia.Logica\bin\Debug\EntityFramework.xml
+C:\Users\David\Documents\GitHub\ProyectoBD\Farmacy\Farmacia.Logica\obj\Debug\Farmacia.Logica.csproj.AssemblyReference.cache
+C:\Users\David\Documents\GitHub\ProyectoBD\Farmacy\Farmacia.Logica\obj\Debug\Farmacia.Logica.csproj.CoreCompileInputs.cache
+C:\Users\David\Documents\GitHub\ProyectoBD\Farmacy\Farmacia.Logica\obj\Debug\Farmacia.Logica.csproj.CopyComplete
+C:\Users\David\Documents\GitHub\ProyectoBD\Farmacy\Farmacia.Logica\obj\Debug\Farmacia.Logica.dll
+C:\Users\David\Documents\GitHub\ProyectoBD\Farmacy\Farmacia.Logica\obj\Debug\Farmacia.Logica.pdb

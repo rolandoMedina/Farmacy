@@ -27,6 +27,16 @@ namespace Farmacia
             m.Theme = MaterialSkinManager.Themes.DARK;
             m.ColorScheme = new ColorScheme(Primary.LightBlue900, Primary.LightBlue900, Primary.BlueGrey500,
                 Accent.LightBlue200, TextShade.WHITE);
+
+            //Reloj
+            lblTimer.Text = DateTime.Now.ToLongTimeString();
+            clock.Start();
+
+            //Setiar Tamaño de labels
+            lblBienvenida.Font = new Font("Arial", 16, FontStyle.Regular);
+            lblTimer.Font = new Font("Arial", 32, FontStyle.Regular);
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -64,6 +74,8 @@ namespace Farmacia
         private void Form1_Load(object sender, EventArgs e)
         {
             
+
+
         }
 
         private void materialTabControl1_Selected(object sender, TabControlEventArgs e)
@@ -193,6 +205,32 @@ namespace Farmacia
                     MessageBox.Show("Cliente no existe");
                     break;
             }
+
+        }
+
+        private void lblTimer_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void clock_Tick(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void lblBienvenida_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void clock_Tick_1(object sender, EventArgs e)
+        {
+            clock.Start();
+            lblTimer.Text = DateTime.Now.ToLongTimeString();
+        }
+
+        private void lblTimer_Click_1(object sender, EventArgs e)
+        {
 
         }
     }

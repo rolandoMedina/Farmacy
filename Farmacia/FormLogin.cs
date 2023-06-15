@@ -11,14 +11,11 @@ using System.Windows.Forms;
 
 namespace Farmacia
 {
-    public partial class FormFactura : MaterialSkin.Controls.MaterialForm
+    public partial class FormLogin : MaterialSkin.Controls.MaterialForm
     {
-        public FormFactura()
+        public FormLogin()
         {
             InitializeComponent();
-            this.StartPosition = FormStartPosition.CenterScreen;
-
-            //Propiedades Material Skin
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
@@ -26,12 +23,7 @@ namespace Farmacia
                 Accent.LightBlue200, TextShade.WHITE);
         }
 
-        private void materialTextBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void materialListView2_SelectedIndexChanged(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

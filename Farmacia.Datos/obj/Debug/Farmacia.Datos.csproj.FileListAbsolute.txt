@@ -80,3 +80,15 @@ C:\Users\rolan\Desktop\f\FarmaciaT\Farmacia.Datos\bin\Debug\EntityFramework.SqlS
 C:\Users\rolan\Desktop\f\FarmaciaT\Farmacia.Datos\bin\Debug\EntityFramework.xml
 C:\Users\rolan\Desktop\f\FarmaciaT\Farmacia.Datos\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\rolan\Desktop\f\FarmaciaT\Farmacia.Datos\obj\Debug\Farmacia.Datos.csproj.CopyComplete
+C:\Users\David\Documents\GitHub\ProyectoBD\Farmacy\Farmacia.Datos\bin\Debug\Farmacia.Datos.dll.config
+C:\Users\David\Documents\GitHub\ProyectoBD\Farmacy\Farmacia.Datos\bin\Debug\Farmacia.Datos.dll
+C:\Users\David\Documents\GitHub\ProyectoBD\Farmacy\Farmacia.Datos\bin\Debug\Farmacia.Datos.pdb
+C:\Users\David\Documents\GitHub\ProyectoBD\Farmacy\Farmacia.Datos\bin\Debug\EntityFramework.dll
+C:\Users\David\Documents\GitHub\ProyectoBD\Farmacy\Farmacia.Datos\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\David\Documents\GitHub\ProyectoBD\Farmacy\Farmacia.Datos\bin\Debug\EntityFramework.xml
+C:\Users\David\Documents\GitHub\ProyectoBD\Farmacy\Farmacia.Datos\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\David\Documents\GitHub\ProyectoBD\Farmacy\Farmacia.Datos\obj\Debug\Farmacia.Datos.csproj.AssemblyReference.cache
+C:\Users\David\Documents\GitHub\ProyectoBD\Farmacy\Farmacia.Datos\obj\Debug\Farmacia.Datos.csproj.CoreCompileInputs.cache
+C:\Users\David\Documents\GitHub\ProyectoBD\Farmacy\Farmacia.Datos\obj\Debug\Farmacia.Datos.csproj.CopyComplete
+C:\Users\David\Documents\GitHub\ProyectoBD\Farmacy\Farmacia.Datos\obj\Debug\Farmacia.Datos.dll
+C:\Users\David\Documents\GitHub\ProyectoBD\Farmacy\Farmacia.Datos\obj\Debug\Farmacia.Datos.pdb
